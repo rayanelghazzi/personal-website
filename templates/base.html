@@ -13,8 +13,8 @@
         <meta name="color-scheme" content="dark light">
 
         <title>{% block title %} {% endblock title %}</title>
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="shortcut icon" href="{{ get_url(path='/favicon.ico') }}" />
+        <link rel="stylesheet" href="{{ get_url(path='/css/style.css') }}" />
         <style>
             body {
                 margin: 0 auto;
@@ -47,10 +47,10 @@
         <main>
             <header>
                 <p>
-                    [<a href="/">About</a>]
-                    [<a href="/articles">Articles</a>]
-                    [<a href="/now">Now</a>]
-                    [<a href="/resume">Resume</a>]
+                    [<a href="{{ get_url(path='/') }}">About</a>]
+                    [<a href="{{ get_url(path='/articles') }}">Articles</a>]
+                    [<a href="{{ get_url(path='/now') }}">Now</a>]
+                    [<a href="{{ get_url(path='/resume') }}">Resume</a>]
                 </p>
             </header>
 
